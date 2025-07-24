@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+    <form action="success.html" >
+        <caption>Student Registration Form </caption><br/><br/>
+        <label for="fn">First Name:</label>
+        <input type="text" id="fn" required ><br/><br/>
+        <label for="ln">Last Name:</label>
+        <input type="text" id="ln" required><br/><br/>
+        <label for="gn">Gender</label>
+        <input type="radio" id="gn" name="Gender" value="male" required >Male
+        <input type="radio" id="gn" name="Gender" value="female" required> Female
+        <input type="radio" id="gn" name="Gender" value="other" required>Other <br/><br/>
+        <label for="email">Email:</label>
+        <input type="text" id="email" required ><br/><br/>
+
+        <label for="tel">Contact:</label>
+        <input type="tel" id="tel" pattern="[0-9]{10}"required ><br/><br/>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required><br/><br/>
+
+        <label for="address">Address:</label>
+        <textarea id="address" rows="4" cols="50" required></textarea><br/><br/>
+
+        <label for="lang">Languages Known</label>
+        <input type="checkbox" id="lang" name="lang" value="english" required>English
+        <input type="checkbox" id="lang" name="lang" value="hind" required>Hindi 
+        <input type="checkbox" id="lang" name="lang" value="telugu" required>Telugu
+        <input type="checkbox" id="lang" name="lang" value="tamil" required>Tamil <br/><br/>
+
+        <label for="branch">Branch:</label>
+        <select>
+            <option value="">--select--</option>
+            <option value="cse">CSE</option>
+            <option value="ece">ECE</option>
+            <option value="eee">EEE</option>
+            <option value="civil">Civil</option>
+            <option value="mech">Mechanical</option>
+            <option value="it">IT</option>
+            <option value="other">Other</option>
+        </select>
+        <br/><br/>
+        <br><label for="resume">Upload Resume:</label><br/>
+        <input type="file" id="resume" name="resume" ><br/><br/>
+        <button type="submit">Submit</button>
+        </form>
+    
+
+</body>
+</html>
