@@ -4,14 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration form</title>
+      <style>
+    .section {
+      margin-bottom: 25px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .section h3 {
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 95%;
+      padding: 6px;
+      margin-top: 4px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
     <form action="success.html" >
         <caption>Student Registration Form </caption><br/><br/>
         <label for="fn">First Name:</label>
         <input type="text" id="fn" required ><br/><br/>
+
         <label for="ln">Last Name:</label>
         <input type="text" id="ln" required><br/><br/>
+        
         <label for="gn">Gender</label>
         <input type="radio" id="gn" name="Gender" value="male" required >Male
         <input type="radio" id="gn" name="Gender" value="female" required> Female
