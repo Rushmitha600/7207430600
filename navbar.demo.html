@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        *{
+            border-radius: 10px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #bf1414;
+            padding: 10px 20px;
+
+        }
+        .navbar .logo{
+            flex:1;
+        }
+        .navbar .logo img {
+            height: 40px;;
+        }
+        .navbar .title {
+            flex: 2;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+           color: azure;
+        }
+        .navbar .links {
+            flex: 1;
+        }
+        .navbar .links a {
+            color: azure;
+            margin: 0 10px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="klu logo.jpg">
+        </div>
+        <div class="title">
+            Learning Management System
+        </div>
+        <div class="links">
+            <a href="https://www.kluniversity.in/">Home</a>
+            <a href="https://newerp.kluniversity.in">About us</a>
+            <a href="https://lms.kluniversity.in/login/index.php">SignIn/Signup</a>
+        </div>
+    </nav>
+</body>
+</html>
