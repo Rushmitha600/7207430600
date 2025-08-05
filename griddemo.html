@@ -2,8 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" cont<ent="width=device-width, initial-scale=1.0">
     <title>griddemo</title>
+    <style>
+        .container{
+            display: grid;
+            grid-row: 10% 80% 10%;
+            grid-column: 35% 30% 35%;
+            height: 100vh;
+        }
+        .top{
+            height: 10vh;
+            grid-column: 1/4;
+            background-color: lightblue;
+        }
+        .lt{
+            height: 80vh;
+            grid-row: 2/3;
+            grid-column: 1/2;
+            background-color: lightgreen;
+        }
+        .main{
+            grid-row: 2/3;
+            grid-column: 2/3;
+            background-color: lightcoral;
+            height: 80vh;
+            text-align: center;
+        }
+        .rt{
+            grid-row:2/3;
+            grid-column: 3/4;
+            background-color: lightcyan;
+            height: 80vh;
+        }
+        .ft{
+            grid-row: 3/4;
+            grid-column: 1/4;
+            background-color: lightgoldenrodyellow;
+            height: 10vh;
+        }
+    </style>
 </head>
 <body>
     <div class="container">

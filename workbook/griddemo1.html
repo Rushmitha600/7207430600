@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>griddemo-1</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            grid-template-rows: 10% 80% 10%;
+            height: 100vh;
+        }
+        .header {
+            grid-column: 1 / -1;
+            background-color: lightblue;
+        }
+        .search {
+            grid-column: 1 / -1;
+            background-color: lightgreen;
+        }
+        .left {
+            grid-row: 2 / -1;
+            background-color: lightcoral;
+        }
+        .middle {
+            grid-row: 2 / -1;
+            background-color: lightcyan;
+        }
+        .right {
+            grid-row: 2 / -1;
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="header">Header</div>
+    <div class="search">Search</div>
+    <div class="left">Left Side Bar</div>
+    <div class="middle">Middle</div>
+    <div class="right">Right side Bar</div>
+  </div>
+</body>
+</html>
