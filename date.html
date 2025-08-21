@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Date Object and methods</title>
+</head>
+<body>
+    <script>
+        document.write("<h2>Creating Dates</h2>");
+        let now= new Date();
+        document.write("Current Date and Time: " + now + "<br><br>");
+
+        let specificDate = new Date(2025, 7, 13); // Note: Month is 0-based
+        document.write("Specific Date: " + specificDate + "<br><br>");
+        let dateFormatString = new Date("2025-08-13T00:30:00");
+        document.write("From String: " + dateFormatString + "<br><br>");
+        let timestampDate = new Date(1734086400000);
+        document.write("From Timestamp: " + timestampDate + "<br><br>");
+
+        document.write("<h2>Getting Date Components</h2>");
+        document.write("Year: " + now.getFullYear() + "<br><br>");
+        document.write("Month(0-11): " + now.getMonth() + "<br><br>"); // Month is 0-based
+        document.write("Date(1-31): " + now.getDate() + "<br><br>");
+        document.write("Day of Week(0-6): " + now.getDay() + "<br><br>"); // 0 is Sunday
+        document.write("Hours(0-23): " + now.getHours() + "<br><br>");
+        document.write("Minutes(0-59): " + now.getMinutes() + "<br><br>");
+        document.write("Seconds(0-59): " + now.getSeconds() + "<br><br>");
+        document.write("Milliseconds(0-999): " + now.getMilliseconds() + "<br><br>");
+        document.write("Timestamp (ms): " + now.getTime() + "<br><br>");
+
+        document.write("<h2>Setting Date Components</h2>");
+        let newDate = new Date();
+        newDate.setFullYear(2030);
+        newDate.setMonth(11); // December
+        newDate.setDate(16); // 16th
+        newDate.setHours(8);
+        newDate.setMinutes(15);
+        document.write("Updated Date: " + newDate + "<br><br>");
+
+        document.write("<h2>Formating Dates</h2>");
+        document.write("toDateString(): " + now.toDateString() + "<br><br>");
+        document.write("toTimeString(): " + now.toTimeString() + "<br><br>");
+        document.write("toLocaleDateString(): " + now.toLocaleDateString() + "<br><br>");
+        document.write("toLocaleTimeString(): " + now.toLocaleTimeString() + "<br><br>");
+        document.write("toISOString(): " + now.toISOString() + "<br><br>");
+
+        document.write("<h2>Date.now</h2>");
+        document.write("Current Timestamp: " + Date.now() + "<br><br>");
+
+        document.write("<h2>Time Difference Example</h2>");
+        let start = new Date("2025-08-13T00:00:00");
+        let end = new Date("2025-08-14T00:00:00");
+        let timeDiff = end - start; // Difference in milliseconds
+        let diffHours =timeDiff / (1000 * 60 * 60);
+        document.write("Time Difference in Hours: " + diffHours + "<br><br>");
+        </script>
+</body>
+</html>

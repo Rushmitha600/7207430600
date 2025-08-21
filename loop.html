@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //====CONDITIONAL STATEMENTS====//
+        document.write("<h2>1. if statements</h2>");
+        let num = 10;
+        if (num > 0) {
+            document.write(num+"Number is positive. <br><br>");
+        }
+        document.write("<h2>2. if-else statements</h2>");
+        let age = 18;
+        if (age >= 18) {
+            document.write("You are eligible to vote. <br><br>");
+        } else {
+            document.write("You are a not eligible to vote. <br><br>");
+        }
+        document.write("<h2>3. if-else if-else statements</h2>");
+        let score = 85; 
+        if (score >= 90) {
+            document.write("Grade: A <br><br>");
+        } else if (score >= 80) {
+            document.write("Grade: B <br><br>");
+        } else if (score >= 70) {
+            document.write("Grade: C <br><br>");
+        } else {
+            document.write("Grade: D <br><br>");
+        }
+        document.write("<h2>4. switch statements</h2>");
+        let day = 3;
+        switch (day) {  
+            case 1:
+                document.write("Monday <br><br>");
+                break;
+            case 2:
+                document.write("Tuesday <br><br>");
+                break;
+            case 3:
+                document.write("Wednesday <br><br>");
+                break;
+            case 4:
+                document.write("Thursday <br><br>");
+                break;
+            case 5:
+                document.write("Friday <br><br>");
+                break;
+            case 6:
+                document.write("Saturday <br><br>");
+                break;
+            case 7:
+                document.write("Sunday <br><br>");
+                break;
+            default:
+                document.write("Invalid day <br><br>");
+        }
+        
+    </script>
+        
+</body>
+</html>
