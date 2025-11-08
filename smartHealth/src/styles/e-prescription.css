@@ -1,0 +1,352 @@
+.e-prescription {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e5f2fd 0%, #f5f8fb 100%);
+  padding: 20px;
+}
+
+.prescription-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.prescription-header h1 {
+  font-size: 2.5em;
+  color: #22345e;
+  margin-bottom: 10px;
+  background: linear-gradient(96deg, #48c6ef 0%, #6f86d6 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.prescription-header p {
+  color: #44607c;
+  font-size: 1.1em;
+}
+
+.prescription-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.prescription-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.new-prescription-btn,
+.refill-all-btn {
+  background: linear-gradient(98deg, #3b82f6 60%, #68b3fa 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.new-prescription-btn:hover,
+.refill-all-btn:hover {
+  transform: translateY(-2px);
+}
+
+.refill-all-btn {
+  background: linear-gradient(98deg, #10b981 60%, #34d399 100%);
+}
+
+.prescriptions-list h2 {
+  color: #22345e;
+  margin-bottom: 20px;
+}
+
+.prescription-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border-left: 4px solid #3b82f6;
+}
+
+.prescription-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.medication-info h3 {
+  color: #22345e;
+  margin-bottom: 5px;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: white;
+}
+
+.status.active {
+  background: #10b981;
+}
+
+.status.completed {
+  background: #6b7280;
+}
+
+.status.refill-requested {
+  background: #f59e0b;
+}
+
+.prescription-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  color: #64748b;
+  font-size: 0.9em;
+}
+
+.prescription-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.detail {
+  color: #374151;
+}
+
+.prescription-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.action-btn.view {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.action-btn.share {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+.action-btn.refill {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.new-prescription-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.modal-header h2 {
+  color: #22345e;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.prescription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: #374151;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.cancel-btn,
+.submit-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.cancel-btn {
+  background: #e2e8f0;
+  color: #64748b;
+}
+
+.submit-btn {
+  background: linear-gradient(98deg, #3b82f6 60%, #68b3fa 100%);
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #cbd5e1;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+.prescription-features {
+  margin-top: 50px;
+}
+
+.prescription-features h3 {
+  color: #22345e;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card i {
+  font-size: 2.5em;
+  color: #3b82f6;
+  margin-bottom: 15px;
+}
+
+.feature-card h4 {
+  color: #22345e;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #64748b;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .prescription-actions {
+    flex-direction: column;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .prescription-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .prescription-meta {
+    align-items: flex-start;
+  }
+  
+  .prescription-actions {
+    flex-wrap: wrap;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,247 @@
+.medical-history {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e5f2fd 0%, #f5f8fb 100%);
+  padding: 20px;
+}
+
+.history-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.history-header h1 {
+  font-size: 2.5em;
+  color: #22345e;
+  margin-bottom: 10px;
+  background: linear-gradient(96deg, #48c6ef 0%, #6f86d6 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.history-header p {
+  color: #44607c;
+  font-size: 1.1em;
+}
+
+.history-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(62, 130, 246, 0.1);
+  overflow: hidden;
+}
+
+.tabs {
+  display: flex;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tab {
+  flex: 1;
+  padding: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #64748b;
+  transition: all 0.3s;
+}
+
+.tab.active {
+  background: white;
+  color: #3b82f6;
+  border-bottom: 3px solid #3b82f6;
+}
+
+.tab:hover:not(.active) {
+  background: #e2e8f0;
+}
+
+.tab-content {
+  padding: 30px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  color: #22345e;
+}
+
+.add-btn {
+  background: linear-gradient(98deg, #3b82f6 60%, #68b3fa 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+}
+
+.records-list,
+.allergies-list,
+.medications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.record-card,
+.allergy-card,
+.medication-card {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 4px solid #3b82f6;
+}
+
+.allergy-card {
+  border-left-color: #ef4444;
+}
+
+.medication-card {
+  border-left-color: #10b981;
+}
+
+.record-header,
+.allergy-info,
+.medication-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.record-header h3,
+.allergy-info h3,
+.medication-info h3 {
+  color: #22345e;
+  margin: 0;
+}
+
+.record-date {
+  color: #64748b;
+  font-size: 0.9em;
+}
+
+.severity {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: white;
+}
+
+.severity.high {
+  background: #f59e0b;
+}
+
+.severity.critical {
+  background: #ef4444;
+}
+
+.dosage {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.record-details p,
+.allergy-card p,
+.medication-card p {
+  margin: 5px 0;
+  color: #44607c;
+}
+
+.record-actions,
+.allergy-actions,
+.medication-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.action-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.action-btn.view {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.action-btn.download {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.action-btn.edit {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.action-btn.delete {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.action-btn.refill {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .record-header,
+  .allergy-info,
+  .medication-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

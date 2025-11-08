@@ -1,4 +1,5 @@
 {
     "editor.aiStats.enabled": true,
-    "typescript.tsserver.web.projectWideIntellisense.suppressSemanticErrors": true
+    "typescript.tsserver.web.projectWideIntellisense.suppressSemanticErrors": true,
+    "liveServer.settings.port": 5501
 }
